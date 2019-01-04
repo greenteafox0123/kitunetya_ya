@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/import.css" rel="stylesheet">
+    <title>狐茶屋</title>
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function() {
+            var album_class = "";
+            $("ul.global-nav-sub").hide();
+            $(".album").hide();
+            $("#asa").hide();
+            $('.global-nav li').hover(function() {
+                $("ul:not(:animated)", this).slideDown("fast");
+            }, function() {
+                $("ul.global-nav-sub", this).slideUp("fast");
+            });
+
+
+            //短編が増えるとその分行が嵩むので増えたらなんか考える
+            //簡略化できなかったよ……
+            $(".contents li:nth-child(1)").hover(
+                function() {
+                    $("#aoki").show();
+                    $("#aoki").removeClass("magictime perspectiveLeft")
+                    $("#aoki").addClass("magictime perspectiveLeftReturn");
+                },
+                function() {
+                    $("#aoki").removeClass("magictime perspectiveLeftReturn");
+                    $("#aoki").addClass("magictime perspectiveLeft");
+                    $("#aoki").hide();
+                }
+            );
+            $(".contents li:nth-child(2)").hover(
+                function() {
+                    $("#asa").show();
+                    $("#asa").removeClass("magictime perspectiveLeft")
+                    $("#asa").addClass("magictime perspectiveLeftReturn");
+                },
+                function() {
+                    $("#asa").removeClass("magictime perspectiveLeftReturn");
+                    $("#asa").addClass("magictime perspectiveLeft");
+                    $("#asa").hide();
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/top.html"><img src="/img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a>
+        </div>
+        <nav>
+            <ul class="global-nav">
+                <li><a href="/manga.html">まんが</a>
+                    <ul class="global-nav-sub">
+                        <li><a href="/manga/oyakume.html">神様のお役目</a></li>
+                        <li><a href="/manga/sakura.html">桜舞う木の下で</a></li>
+                        <li><a href="/manga/short.html">短編</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about.html">ここについて</a></li>
+                <li><a href="/link.html">周辺案内(リンク）</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrap" id="story">
+        <div class="contents">
+            <h3>短編漫画</h3>
+            <ul>
+                <li><a href="/manga/short/aoki.html">蒼葵くんと紅葉さんの話</a></li>
+                <li><a href="/manga/short/asa.html">朝の色、君の匂い</a></li>
+            </ul>
+            <!--　ここからアルバム関連  -->
+            
+            <!--蒼葵くんのアルバム-->
+            <div id="aoki" class="album">
+                <img src="/img/aoki_album.png" alt="蒼葵アルバム">
+                <section>
+                    蒼葵くんと紅葉さんの出会いのお話。 蒼葵くん、茶狐亭に来てからすこし節煙気味になってそうです。
+                </section>
+            </div>
+
+            <!--朝のアルバム-->
+            <div id="asa" class="album">
+                <img src="/img/asa_album.png" alt="「朝の色、君の匂い」アルバム">
+            </div>
+            
+            <!-- アルバム関連終わり -->
+        </div>
+    </div>
+    <footer>
+        <small>
+                狐茶屋
+                @greentea_0123<br>
+                このサイト上の無断転載を禁じます
+            </small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/import.css" rel="stylesheet">
+        <script src="/js/jquery-1.9.1.min.js"></script>
+        <script>
+                $(function(){
+                    $("ul.global-nav-sub").hide();
+                    $('.global-nav li').hover(function(){
+                    $("ul:not(:animated)", this).slideDown("fast");
+                    }, function(){
+                    $("ul.global-nav-sub",this).slideUp("fast");
+                    });
+                });
+		</script>
+        <title>狐茶屋</title>
+    </head>
+    
+    <body id="manga">
+      <header>
+                <div class="logo">
+                    <a href="top.html"><img src="img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a> 
+                </div>
+                <nav>
+                    <ul class="global-nav">
+                        <li><a href="manga.html">まんが</a>
+                            <ul class="global-nav-sub">
+                                <li><a href="./manga/oyakume.html">神様のお役目</a></li>
+                                <li><a href="./manga/sakura.html">桜舞う木の下で</a></li>
+                                <li><a href="./manga/short.html">短編</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">ここについて</a></li>
+                        <li><a href="link.html">周辺案内(リンク）</a></li>     
+                    </ul>
+                </nav>
+        </header>
+        
+        <div class="wrap">
+            <div class="contents">
+                <h2>漫画おきば</h2>
+                <ul class="manga-list">
+                    <li><a href="./manga/oyakume.html">神様のお役目</a></li>
+                    <section>わけがあって、稲荷神をしている狐「紅葉（くれは）」 いつものようにお勤めをしていると、紅葉の世界に人間が迷い込む。<br>
+                        しかし、人間は記憶を失っていて元の世界に戻ることは出来ない状態だった。 </section>
+                
+                    <li><a href="./manga/sakura.html">桜舞う木の下で</a></li>
+                    <section>ある街の大学生「奏（かなで）」 いつもの様に大学とバイトへ行ったその帰り道、<br>
+                    通りかかった公園の桜の木の下で少女と出会う。これは、やさしさの話。</section>
+                    <li><a href="./manga/short.html">短編漫画</a></li>
+                    <section>短編漫画です</section>
+                </ul>
+                <h2>更新情報</h2>
+                
+                <!--テキストエリア/トップページと同じ（ここいる？）-->
+                <textarea readonly name="更新履歴" cols="60" rows="6">
+12/25 短編漫画　朝の色、君の匂い　追加
+12/8 桜舞う木の下で 4話 15~17頁更新
+11/21 桜舞う木の下で 4話 12~14頁更新
+10/30  桜舞う木の下で 4話 10~11頁更新
+10/21  桜舞う木の下で 4話 7~9頁更新
+8/5  桜舞う木の下で 4話 4~6頁更新
+7/1  桜舞う木の下で 4話 更新開始
+5/19 スマートフォンで漫画を見る際に、ページ順序が逆になってしまうのを修正
+4/24 桜舞う木の下で 3話 最後の頁を更新
+4/15 桜舞う木の下で 3話 追加6頁更
+4/15 漫画ビューアの調節完了……？
+3/20　ページ作成
+                </textarea>
+                <!--テキストエリア終わり-->
+
+                <p>
+                    <seciton>
+                        <a href="https://twitter.com/greentea_0123">Twitter</a>、
+                        <a href="https://pixiv.me/greentea_0123">Pixiv</a>、
+                        <a href="https://mangahack.com/users/784/comics">マンガハック</a>にも公開しています。
+                    </seciton>
+                </p>
+            </div>
+        </div>
+           <footer>
+            <small>
+                狐茶屋
+                @greentea_0123<br>
+                このサイト上の無断転載を禁じます
+            </small>
+        </footer>
+    </body>
+</html>

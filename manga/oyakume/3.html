@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet" />
+    <title>狐茶屋</title>
+
+    <!-- 漫画ビューアー  -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/jquery.mangaviewer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            var ua = navigator.userAgent;
+            if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+                // スマートフォン用コード
+                $('#viewer').mangaviewer({
+                    page: 11, //ページ数
+                    path: '3', //ディレクトリパス
+                    ext: 'jpg', //拡張子
+                    page_ejection: 'right' //ページ送り
+
+                });
+            } else {
+                // PC用コード
+                $('#viewer').mangaviewer({
+                    page: 11, //ページ数
+                    path: '3', //ディレクトリパス
+                    ext: 'jpg', //拡張子
+                    page_ejection: 'left' //ページ送り
+                });
+            }
+        })
+
+    </script>
+</head>
+
+<body>
+    <div id="viewer"></div>
+
+    <footer>
+        <small>
+                狐茶屋
+                @greentea_0123<br>
+                このサイト上の無断転載を禁じます<br>
+                スクリプト:http://conpallo.com/app/free_contents/mangaviewer.html
+            </small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <link href="css/import.css" rel="stylesheet">
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function() {
+            $("ul.global-nav-sub").hide();
+            $('.global-nav li').hover(function() {
+                $("ul:not(:animated)", this).slideDown("fast");
+            }, function() {
+                $("ul.global-nav-sub", this).slideUp("fast");
+            });
+        });
+    </script>
+    <title>狐茶屋</title>
+</head>
+
+<body id="top">
+    <header>
+        <div class="logo">
+            <a href="/top.html"><img src="/img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a>
+        </div>
+        <nav>
+            <ul class="global-nav">
+                <li><a href="manga.html">まんが</a>
+                    <ul class="global-nav-sub">
+                        <li><a href="./manga/oyakume.html">神様のお役目</a></li>
+                        <li><a href="./manga/sakura.html">桜舞う木の下で</a></li>
+                        <li><a href="./manga/short.html">短編</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">ここについて</a></li>
+                <li><a href="link.html">周辺案内(リンク）</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <div class="contents">
+            <a href="/manga/sakura/4.html"><img src="/img/sakura_new.png" width=15% alt="桜最新話"></a>
+            <a href="https://greentea-0123.booth.pm/items/1141549"　target="_blank"><img src="/img/passcase.png" width=15% alt="パスケース"></a>
+            <h2>ひとこと</h2>
+            <section>もうすぐ今年も終わりですね</section>
+            <!--テキストエリア(もし他に使うところがあったらdivを作る)-->
+
+            <h2>更新履歴</h2>
+            <textarea readonly name="更新履歴" cols="60" rows="6">
+12/25 短編漫画　朝の色、君の匂い　追加
+12/14 更新履歴をスクロールにするよう修正
+12/8　桜舞う木の下で 4話　15~17頁更新
+11/21 桜舞う木の下で 4話　12~14頁更新
+10/30 桜舞う木の下で 4話　10~11頁更新
+10/24 漫画の各作品ページをちょっと動くように修正しました
+10/21 桜舞う木の下で 4話　7~9頁更新
+8/5  桜舞木の下で 4話　4~6頁更新
+7/1  桜舞木の下で 4話 更新開始。
+5/19 スマートフォンで漫画を見る際に、ページ順序が逆になってしまうのを修正
+5/13 上部メニューの「まんが」欄にカーソルを合わせた時、サブメニューが表示されるように変更
+4/24  桜舞う木の下で 3話 最後の頁を更新
+4/15  桜舞う木の下で 3話 追加6頁更新
+4/15 漫画ビューアの調節
+3/20 ページ作成
+                </textarea>
+
+            <!--テキストエリア終わり-->
+            <h2>ツイート</h2>
+            <a class="twitter-timeline" href="https://twitter.com/greentea_0123" data-widget-id="685787137124372481">@greentea_0123さんのツイート</a>
+            <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            </script>
+        </div>
+    </div>
+    <footer>
+        <small>
+                狐茶屋
+                @greentea_0123<br>
+                このサイト上の無断転載を禁じます
+            </small>
+    </footer>
+
+</body>
+</html>

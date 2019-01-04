@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/import.css" rel="stylesheet">
+    <title>狐茶屋</title>
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function() {
+        $("ul.global-nav-sub").hide();
+        $(".album").hide();
+        $('.global-nav li').hover(function() {
+            $("ul:not(:animated)", this).slideDown("fast");
+        }, function() {
+            $("ul.global-nav-sub", this).slideUp("fast");
+        });
+        $(".contents").hover(
+            function() {
+                $(".album").show();
+                $(".album").removeClass("magictime perspectiveLeft")
+                $(".album").addClass("magictime perspectiveLeftReturn");
+            },
+            function() {
+                $(".album").removeClass("magictime perspectiveLeftReturn");
+                $(".album").addClass("magictime perspectiveLeft");
+            }
+        );
+        });
+      
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/top.html"><img src="/img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a>
+        </div>
+        <nav>
+            <ul class="global-nav">
+                <li><a href="/manga.html">まんが</a>
+                    <ul class="global-nav-sub">
+                        <li><a href="/manga/oyakume.html">神様のお役目</a></li>
+                        <li><a href="/manga/sakura.html">桜舞う木の下で</a></li>
+                        <li><a href="/manga/short.html">短編</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about.html">ここについて</a></li>
+                <li><a href="/link.html">周辺案内(リンク）</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrap" id="story">
+        <div class="contents">
+            <h3>桜舞う木の下で（更新中）</h3>
+            <ul>
+                <li><a href="./sakura/1.html">1話</a></li>
+                <li><a href="./sakura/2.html">2話</a></li>
+                <li><a href="./sakura/3.html">3話</a></li>
+                <li><a href="./sakura/4.html">4話（更新中）</a></li>
+            </ul>
+            <div class="album">
+                <img src="/img/creating_album.png" alt="桜アルバム">
+                <section>
+                    アルバムは制作中です。鈴さんにはなにか秘密があるようです。
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <small>
+                狐茶屋
+                @greentea_0123<br>
+                このサイト上の無断転載を禁じます
+            </small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+/*ヘッダー*/
+
+header {
+    height: 100px;
+    width: 960px;
+}
+
+.logo {
+    float: left;
+    margin-top: 50px;
+}
+
+.global-nav {
+    margin-top: 100px;
+    float: left;
+}
+
+.global-nav li {
+    float: left;
+    margin: 0 20px;
+    font-size: 0 20px;
+    list-style: none;
+    font-family: 'kokoro', serif;
+    position: relative;
+}
+
+
+.global-nav li a:hover {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+    text-decoration: none;
+
+}
+
+.global-nav li a {
+    color: black;
+}
+
+/*マウス―バーメニューの設定*/
+
+.global-nav-sub {
+    width: 130px;
+    margin-left: -20;
+    position: absolute;
+    padding: 0;
+}
+
+.global-nav-sub li a {
+    font-size: 12px;
+    margin-top: 10px: display: block;
+}
+
+
+
+
+
+.logo {}
+
+/*フッター*/
+
+footer {
+    text-align: center;
+    color: #000000;
+    padding: 20px 0;
+    background-color: #fdeff2;
+}
+
+footer small {
+    font-size: 12px;
+}
+
+/*共通*/
+
+.wrap {
+    margin-top: 100px;
+    font-family: 'hanari', serif;
+    background-image: url(../img/323e76a28541aecb5ecc0d18f4e9d433_m.jpg);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.contents {
+    margin: 100px 100px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a img:hover {
+    opacity: 0.5;
+}
+
+
+
+/*インデックス関連*/
+
+#index {
+    background-color: #ffffff;
+}
+
+/*トップページ関連*/
+
+#top {
+    background-color: #ffffff;
+    font-style: bold;
+}
+
+/*テキストエリア関連*/
+textarea{
+    resize: none;
+    background-color: rgba(255,255,255, 0.3);
+    border:none;
+}
+
+
+
+/*漫画関連*/
+
+#manga section {
+    margin-left: 20px;
+}
+
+.manga-list li {
+    font-size: 18px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.manga-list li a {
+    color: black;
+    font-style: normal;
+}
+
+#story li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+/*動的なアルバム関連*/
+
+.album img {
+    display: block;
+    zoom:60%;
+    border: 3px solid #8d6449;
+    border-left: 20px solid #8d6449;
+}
+
+.album section{
+    display:inline;
+    background-color: #FFFFFF
+}
+/*アバウト*/
+
+.contents #icon {
+    float: left;
+}
+
+.profile p h1 {
+    margin-left: 10px;
+    width: 600px;
+    float: left;
+}
+
+
+/*リンクページ*/
+
+#link li {
+    list-style: none;
+}
+
+/*ビューアー*/
+
+#oyakume body {
+    zoom: 50%;
+}
+
+#viewer .sheet {
+    width: 50%;
+    text-align: center;
+}
+
+#viewer img {
+    zoom: 10%;
+    width: 50%;
+    cursor: pointer;
+}
+
+#viewer #page-link {
+    clear: both;
+    text-align: center;
+}
+
+#viewer #page-link .btn.active {
+    border: inset 100px #086A87;
+    background-color: #2E9AFE;
+}
+
+#viewer .btn {
+    margin-left: 100px;
+}
