@@ -1,54 +1,59 @@
 <html>
     <head>
-        <meta charset="UTF-8">
-        <link href="css/import.css" rel="stylesheet">
-        <script src="/js/jquery-1.9.1.min.js"></script>
-        <script>
-                $(function(){
-                    $("ul.global-nav-sub").hide();
-                    $('.global-nav li').hover(function(){
-                    $("ul:not(:animated)", this).slideDown("fast");
-                    }, function(){
-                    $("ul.global-nav-sub",this).slideUp("fast");
-                    });
-                });
-		</script>
-        <title>狐茶屋</title>
-    </head>
-    
-    <body id="link">
-      <header>
-                <div class="logo">
-                    <a href="top.html"><img src="img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a> 
-                </div>
-                <nav>
-                    <ul class="global-nav">
-                        <li><a href="manga.html">まんが</a>
-                            <ul class="global-nav-sub">
-                                <li><a href="./manga/oyakume.html">神様のお役目</a></li>
-                                <li><a href="./manga/sakura.html">桜舞う木の下で</a></li>
-                                <li><a href="./manga/short.html">短編</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">ここについて</a></li>
-                        <li><a href="link.html">周辺案内(リンク）</a></li>     
+    <meta charset="UTF-8">
+    <link href="css/import.css" rel="stylesheet">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function() {
+            $("ul.global-nav-sub").hide();
+            $('.global-nav li').hover(function() {
+                $("ul:not(:animated)", this).slideDown("fast");
+            }, function() {
+                $("ul.global-nav-sub", this).slideUp("fast");
+            });
+        });
+    </script>
+    <title>狐茶屋</title>
+</head>
+
+<body id="link">
+    <header>
+        <div class="logo">
+            <a href="top.html"><img src="img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a>
+        </div>
+        <nav>
+            <ul class="global-nav">
+                <li><a href="manga.html">まんが</a>
+                    <ul class="global-nav-sub">
+                        <li><a href="./manga/oyakume.html">神様のお役目</a></li>
+                        <li><a href="./manga/sakura.html">桜舞う木の下で</a></li>
+                        <li><a href="./manga/short.html">短編</a></li>
                     </ul>
-                </nav>
-        </header>
-        
-        <div class="wrap">
-            <div class="contents">
+                </li>
+                <li><a href="about.html">ここについて</a></li>
+                <li><a href="link.html">周辺案内(リンク）</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <div class="contents">
             <ul>
                 <li><a href="http://kitsune-greentea.ldblog.jp/">ブログ</a></li>
+                <section>
+                    分屋となるブログです。イベントの参加のお知らせや、漫画を投稿した際、<br>
+                    ここにも情報を記載を記載します。<br>
+                    もしかしたら、作品のことなどもここに書くことがあるかもしれません。
+                </section>
             </ul>
-            </div>
         </div>
-        <footer>
-            <small>
+    </div>
+    <footer>
+        <small>
                 狐茶屋<br>
                 @greentea_0123<br>
                 このサイト上の無断転載を禁じます
             </small>
-        </footer>
-    </body>
+    </footer>
+</body>
 </html>
