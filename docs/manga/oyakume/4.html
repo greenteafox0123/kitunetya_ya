@@ -13,7 +13,7 @@
             if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
                 // スマートフォン用コード
                 $('#viewer').mangaviewer({
-                   page: 10,   //ページ数
+                    page: 10, //ページ数
                     path: '4', //ディレクトリパス
                     ext: 'jpg', //拡張子
                     page_ejection: 'right' //ページ送り
@@ -22,7 +22,7 @@
             } else {
                 // PC用コード
                 $('#viewer').mangaviewer({
-                 page: 10,   //ページ数
+                    page: 10, //ページ数
                     path: '4', //ディレクトリパス
                     ext: 'jpg', //拡張子
                     page_ejection: 'left' //ページ送り
@@ -34,6 +34,9 @@
 
 <body>
     <div id="viewer"></div>
+    <br> この話をつぶやく：
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="神様のお役目　第四話 - 狐茶屋" data-lang="ja" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <footer>
         <small>
