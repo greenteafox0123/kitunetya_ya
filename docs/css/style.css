@@ -2,7 +2,7 @@
 
 .topimg{
   content: '';
-  position: absolute;
+  position: relative;
   /* 参考: http://designcolor-web.com/2016/09/14/css-blur-effects-background/*/
   top: -8px;
   left: -8px;
