@@ -13,10 +13,33 @@
             });
         });
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slider').bxSlider({
+                width: auto,
+                height: auto,
+                auto: true,
+                pause: 5000,
+            });
+        });
+        </script>
+        
     <title>狐茶屋</title>
 </head>
 
 <body id="top">
+        <!--スライダー的なのにしました-->
+    <div class="topimg">
+        <div class="slider">
+            <img src="./img/oyakume_album.png" width="500px" height="300px" alt="">  
+            <img src="./img/aoki_album.png" width="500px" height="300px" alt="">  
+            <img src="./img/asa_album.png" width="500px" height="300px" alt="">
+        </div>
+    </div>
+    
     <header>
         <div class="logo">
             <a href="/top.html"><img src="img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a>
@@ -39,7 +62,7 @@
     <div class="wrap">
         <div class="contents">
             <a href="manga/sakura/4.html"><img src="img/sakura_new.png" width=15% alt="桜最新話"></a>
-            <a href="https://greentea-0123.booth.pm/items/1141549"　target="_blank"><img src="img/passcase.png" width=15% alt="パスケース"></a>
+            <a href="https://greentea-0123.booth.pm/items/1141549" target="_blank"><img src="img/passcase.png" width=15% alt="パスケース"></a>
             <h2>ひとこと</h2>
             <section>そろそろ桜が咲く頃ですねえ…。</section>
             <!--テキストエリア(もし他に使うところがあったらdivを作る)-->

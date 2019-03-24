@@ -1,5 +1,19 @@
 /*ヘッダー*/
 
+.topimg{
+  content: '';
+  position: absolute;
+  /* 参考: http://designcolor-web.com/2016/09/14/css-blur-effects-background/*/
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  z-index: -1;
+  filter: blur(3px);/*ぼかし度*/
+  background-color: rgb(255,255,255);/*半透明カラーの色*/
+  opacity: 0.2;/*半透明カラーの透明度*/
+}
+
 header {
     height: 100px;
     width: 960px;
@@ -83,8 +97,8 @@ a:hover {
 
 
 .contents {
-    margin: 100px 100px;
-    padding: 10px 20px 10px 20px;
+    margin: 1px 100px;
+    padding: auto 10px 20px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
