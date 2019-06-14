@@ -1,47 +1,37 @@
 /*ヘッダー*/
 
-/* .topimg{
-  content: '';
-  position: relative;
-  /* 参考: http://designcolor-web.com/2016/09/14/css-blur-effects-background/*/
-  /* top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  z-index: -1;
-  /* filter: blur(3px);/*ぼかし度*/
-  /* background-color: rgb(255,255,255);/*半透明カラーの色*/
-  /* opacity: 0.2;/*半透明カラーの透明度*/
-/* }  */
-
 header {
-    height: 100px;
-    width: 960px;
+    height: 120px;
+    width: 100%;
+/*    position: fixed;*/
+    background-color:#FFFFFF;
+    z-index:9999;
 }
 
 .logo {
     float: left;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .global-nav {
-    margin-top: 120px;
+    margin-top: 50px;
     float: left;
 }
 
 .global-nav li {
     float: left;
-    margin: 0 20px;
+    margin: 0 10px;
     font-size: 0 20px;
     list-style: none;
     font-family: 'kokoro', serif;
     position: relative;
+    display: flex;
 }
 
 
 .global-nav li a:hover {
     border-bottom: 2px solid #ffffff;
-    padding-bottom: 2px;
+/*    padding-bottom: 2px;*/
     text-decoration: none;
 
 }
@@ -54,14 +44,19 @@ header {
 
 .global-nav-sub {
     width: 130px;
-    margin-left: -20;
+    top:20px;
+    left:-20px;
     position: absolute;
     padding: 0;
+    background-color: #FFFFFF;
+    z-index: 2;
 }
 
 .global-nav-sub li a {
     font-size: 12px;
-    margin-top: 10px: display: block;
+    margin-top: 10px;
+    z-index:2;
+    display: block;
 }
 
 
@@ -86,7 +81,7 @@ footer small {
 /*共通*/
 
 .wrap {
-    margin-top: 100px;
+    margin-top: 10px;
     font-family: 'hanari', serif;
     background-image: url(../img/323e76a28541aecb5ecc0d18f4e9d433_m.jpg);
 }
@@ -97,7 +92,7 @@ a:hover {
 
 
 .contents {
-    margin: 1px 100px;
+    margin: 0px auto;
     padding: auto 10px 20px;
     background-color: rgba(255, 255, 255, 0.5);
 }
