@@ -9,9 +9,9 @@
   right: -8px;
   bottom: -8px;
   z-index: -1;
-  /* filter: blur(3px);/*ぼかし度*/ */
-  /* background-color: rgb(255,255,255);/*半透明カラーの色*/ */
-  /* opacity: 0.2;/*半透明カラーの透明度*/ */
+  /* filter: blur(3px);/*ぼかし度*/
+  /* background-color: rgb(255,255,255);/*半透明カラーの色*/
+  /* opacity: 0.2;/*半透明カラーの透明度*/ 
 /* }  */
 
 header {
