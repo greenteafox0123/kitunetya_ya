@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Kosugi+Maru&display=swap");
+
 /*ヘッダー*/
 
 header {
@@ -128,10 +130,7 @@ h2.contents {
 
 /*ビッグカード*/
 /*https://do.gt-gt.org/ より拝借*/
-seciton.con {
-    margin: 100px auto;
-    max-width: 600px;
-}
+
 
 a.bigcard {
     display: -webkit-box;
@@ -139,7 +138,7 @@ a.bigcard {
     text-decoration: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    flex-direction: column;
+    /*flex-direction: column;*/
     margin-bottom: 20px;
     -webkit-transition: background .3s;
     transition: background .3s;
@@ -156,6 +155,11 @@ a.bigcard h5 {
     margin: 10px 0 0;
 }
 
+a.bigcard .memo {
+    font-size: 13px;
+    margin-top: 0;
+    color: #aba9a5;
+}
 
 a.bigcard figure {
     margin: 0;
@@ -165,11 +169,18 @@ a.bigcard figure {
 }
 
 a.bigcard figure img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
 }
+
+a.bigcard .text {
+    -webkit-box-flex: 2;
+    flex: 2;
+    padding: 5px;
+}
+
 
 /*テキストエリア関連*/
 textarea{
