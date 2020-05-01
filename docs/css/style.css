@@ -97,15 +97,19 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+h2.contents {
+    background-color: #ffffff;
+}
+
 .clearfix:after {
     content: "";
     display: block;
     clear: both;
 }
 
-a img:hover {
+/*a img:hover {
     opacity: 0.5;
-}
+}*/
 
 
 
@@ -122,12 +126,60 @@ a img:hover {
     font-style: bold;
 }
 
+/*ビッグカード*/
+/*https://do.gt-gt.org/ より拝借*/
+seciton.con {
+    margin: 100px auto;
+    max-width: 600px;
+}
+
+a.bigcard {
+    display: -webkit-box;
+    display: flex;
+    text-decoration: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-bottom: 20px;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+}
+
+a.bigcard:hover {
+    background: #f7f6f3;
+    /* ※リンクカードをホバーしたときの背景色 */
+    color: inherit;
+}
+
+a.bigcard h5 {
+    font-size: 20px;
+    margin: 10px 0 0;
+}
+
+
+a.bigcard figure {
+    margin: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+a.bigcard figure img {
+    width: 50%;
+    height: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
 /*テキストエリア関連*/
 textarea{
     resize: none;
     background-color: rgba(255,255,255, 0.3);
     border:none;
 }
+
+
+
 
 
 
@@ -153,7 +205,7 @@ textarea{
     margin-bottom: 10px;
 }
 
-/*動的なアルバム関連*/
+/*アルバム関連*/
 
 .album img {
     display: block;
