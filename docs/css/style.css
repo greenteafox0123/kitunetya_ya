@@ -136,7 +136,7 @@ a.bigcard {
     display: -webkit-box;
     display: flex;
     text-decoration: none;
-    -webkit-box-orient: vertical;
+    /*-webkit-box-orient: vertical;*/
     -webkit-box-direction: normal;
     /*flex-direction: column;*/
     margin-bottom: 20px;
