@@ -325,6 +325,13 @@ textarea{
     background: #66c7b3;
 }
 
+#page-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #page-list button {
     margin: 4px;
     cursor: pointer;
@@ -352,4 +359,14 @@ textarea{
 
 .footer-logo img {
     width: 180px;
+}
+
+.share {
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.link-script {
+    word-break: break-all;
 }
