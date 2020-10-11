@@ -3,7 +3,7 @@
 /*ヘッダー*/
 
 header {
-    height: 120px;
+    height: 90px;
     width: 100%;
     position: fixed;
     background-color:#FFFFFF;
@@ -11,12 +11,39 @@ header {
 
 .logo {
     float: left;
-/*    margin-top: 10px;*/
+}
+
+.logo img {
+    height: 80px;
 }
 
 .global-nav {
-    margin-top: 20px;
-    float: left;
+    margin: 4px;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 11pt;
+}
+
+@media (max-width: 720px) {
+    .logo img {
+        height: 64px;
+    }
+    header {
+        height: 100px;
+    }
+    .logo {
+        float: none;
+    }
+    .global-nav {
+        height: auto;
+    }
+}
+
+.manga-icon {
+    height: 128px;
+    width: 128px;
 }
 
 .global-nav li {
@@ -39,6 +66,19 @@ header {
 
 .global-nav li a {
     color: black;
+}
+
+.changelog {
+    box-sizing: border-box;
+    height: 320px;
+    width: 100%;
+    padding: 8px;
+    overflow-y: scroll;
+    font-size: 10pt;
+}
+
+.changelog ul {
+    padding-inline-start: 16px;
 }
 
 /*マウス―バーメニューの設定*/
@@ -82,8 +122,8 @@ footer small {
 /*共通*/
 
 .wrap {
-    margin-top: 0px;
-    padding: 120px 0px;
+    padding-top: 120px;
+    padding-bottom: 30px;
     font-family: 'hanari', serif;
     background-image: url(../img/323e76a28541aecb5ecc0d18f4e9d433_m.jpg);
 }
@@ -94,8 +134,9 @@ a:hover {
 
 
 .contents {
-    margin:0px 10%;
-    padding: auto 10px 20px;
+    max-width: 640px;
+    margin: 0px auto;
+    padding: 16px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -230,8 +271,12 @@ textarea{
 }
 /*アバウト*/
 
-.contents #icon {
-    float: left;
+.contents #icon img {
+    width: 240px;
+}
+
+.biography {
+    margin: 16px;
 }
 
 .profile p h1 {
@@ -249,31 +294,12 @@ textarea{
 
 /*ビューアー*/
 
-#oyakume body {
-    zoom: 50%;
-}
-
 #viewer .sheet {
-    width: 50%;
-    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
-#viewer img {
-    zoom: 10%;
-    width: 50%;
-    cursor: pointer;
-}
-
-#viewer #page-link {
-    clear: both;
-    text-align: center;
-}
-
-#viewer #page-link .btn.active {
-    border: inset 100px #086A87;
-    background-color: #2E9AFE;
-}
-
-#viewer .btn {
-    margin-left: 100px;
+.btn-toolbar {
+    margin: 32px auto;
+    max-width: 800px;
 }

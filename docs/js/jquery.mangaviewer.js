@@ -82,8 +82,8 @@
 
                  var browser_height = window.innerHeight; //ブラウザの高さを取得
                  var size_view = {}
-                 size_view.height = browser_height - padding_height;
-                 size_view.width = Math.floor(size_view.width / (size_view.height/Reduction_Num));
+                 size_view.height = "auto"; //browser_height - padding_height;
+                 size_view.width = "100%"; //Math.floor(size_view.width / (size_view.height/Reduction_Num));
 
 			
 				// 画像表示
@@ -112,8 +112,8 @@
                  var padding_height = 100; //画像の余白
                  var Reduction_Num = 100; //縮小率
                  var size_view = {}
-                 size_view.height = browser_height - padding_height;
-                 size_view.width = Math.floor(size_view.width / (size_view.height/Reduction_Num));
+                 size_view.height = "auto"; //browser_height - padding_height;
+                 size_view.width = "100%"; //Math.floor(size_view.width / (size_view.height/Reduction_Num));
 			
 				// 画像表示
 				$('div.sheet').attr("id", ejections["sheet_num"]).children().remove();
