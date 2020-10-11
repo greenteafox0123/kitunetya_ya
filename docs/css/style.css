@@ -343,3 +343,17 @@ textarea{
 #page-list button.active {
     background: #66c7b3;
 }
+
+.footer-logo {
+
+}
+
+.footer-logo a {
+    display: block;
+    margin: 8px auto;
+    width: 180px;
+}
+
+.footer-logo img {
+    width: 180px;
+}
