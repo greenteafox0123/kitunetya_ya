@@ -11,7 +11,7 @@
     <script type="text/javascript">
         $(function() {
             var ua = navigator.userAgent;
-            if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 || ua.indexOf('Mobile') > 0) {
+            if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
                 // スマートフォン用コード
                 $('#viewer').mangaviewer({
                     page: 6,
