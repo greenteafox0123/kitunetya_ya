@@ -1,22 +1,9 @@
 <html>
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/import.css" rel="stylesheet">
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script>
-        $(function() {
-            $("ul.global-nav-sub").hide();
-            $('.global-nav li').hover(function() {
-                $("ul:not(:animated)", this).slideDown("fast");
-            }, function() {
-                $("ul.global-nav-sub", this).slideUp("fast");
-            });
-        });
-    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <title>狐茶屋</title>
 </head>
 
@@ -25,17 +12,23 @@
         <div class="logo">
             <a href="./index.html"><img src="img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋"></a>
         </div>
-        <nav>
+        <nav id="dropdown">
             <ul class="global-nav">
-                <li><a href="manga.html">まんが</a>
-                    <ul class="global-nav-sub">
-                        <li><a href="manga/oyakume.html">神様のお役目</a></li>
-                        <li><a href="manga/sakura.html">桜舞う木の下で</a></li>
-                        <li><a href="manga/short.html">短編</a></li>
-                    </ul>
+                <li v-for="item in globalnav">
+                    <a :href="item.url" v-if="!item.submenu">
+                        {{ item.name }}
+                    </a>
+                    <a :href="item.url" v-else v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+                        {{ item.name }}
+                        <ul class="global-nav-sub" :class="{ isOpen }">
+                            <li v-for="item in item.submenu">
+                                <a :href="item.url">
+                                    {{ item.name }}
+                                </a>
+                            </li>
+                        </ul>
+                    </a>
                 </li>
-                <li><a href="about.html">ここについて</a></li>
-                <li><a href="link.html">周辺案内(リンク）</a></li>
             </ul>
         </nav>
     </header>
@@ -43,20 +36,20 @@
     <div class="wrap">
         <div class="contents">
             <section>
-            <h2>最新のリンク</h2>
-            <a href="./manga/sakura/7.html" class="bigcard">
-                <img class="manga-icon" src="img/sakura_new.png" alt="桜最新話">
-                <div class="text">
-                    <p>「桜舞う木の下で」最新話</p>
-                </div>
-            </a>
-            
-            <a href="https://greentea-0123.booth.pm/items/1141549" class="bigcard"- target="_blank">
-                <img class="manga-icon" src="img/passcase.png" alt="パスケース">
-                <div class="text">
-                    <p>パスケース販売中</p>
-                </div>
-            </a>
+                <h2>最新のリンク</h2>
+                <a href="./manga/sakura/7.html" class="bigcard">
+                    <img class="manga-icon" src="img/sakura_new.png" alt="桜最新話">
+                    <div class="text">
+                        <p>「桜舞う木の下で」最新話</p>
+                    </div>
+                </a>
+
+                <a href="https://greentea-0123.booth.pm/items/1141549" class="bigcard" - target="_blank">
+                    <img class="manga-icon" src="img/passcase.png" alt="パスケース">
+                    <div class="text">
+                        <p>パスケース販売中</p>
+                    </div>
+                </a>
             </section>
             <h2>ひとこと</h2>
             <section>桜舞う木の下で 7話開始です</section>
@@ -68,21 +61,21 @@
                 <ul>
                     <li>8/16 桜舞う樹の下で　7話 4~6頁更新</li>
                     <li>7/6 桜舞う樹の下で　7話 1~3頁更新（7話開始）</li>
-                    <li>3/11  桜舞う木の下で　6話 19~25頁更新（六話 更新終了！）</li>
-                    <li>2/9  桜舞う木の下で　6話 19~21頁更新</li>
-                    <li>1/16  桜舞う木の下で　6話 16~18頁更新</li>
+                    <li>3/11 桜舞う木の下で　6話 19~25頁更新（六話 更新終了！）</li>
+                    <li>2/9 桜舞う木の下で　6話 19~21頁更新</li>
+                    <li>1/16 桜舞う木の下で　6話 16~18頁更新</li>
                 </ul>
                 **** 2020年 ****
                 <ul>
-                    <li>12/24  桜舞う木の下で　6話 13~15頁更新</li>
-                    <li>12/2  桜舞う木の下で　6話 10~12頁更新</li>
-                    <li>11/22  桜舞う木の下で　6話 7~9頁更新</li>
-                    <li>10/26  桜舞う木の下で　6話 4~6頁更新</li>
-                    <li>10/11  桜舞う木の下で　6話 1~3頁更新(六話開始です！)</li>
-                    <li>7/14  桜舞う木の下で　5話 18~20頁更新(五話終了です！)</li>
-                    <li>6/24  桜舞う木の下で　5話 15~17頁更新</li>
-                    <li>6/7  桜舞う木の下で　5話 12~14頁更新</li>
-                    <li>5/4  桜舞う木の下で　5話 6~11頁更新</li>
+                    <li>12/24 桜舞う木の下で　6話 13~15頁更新</li>
+                    <li>12/2 桜舞う木の下で　6話 10~12頁更新</li>
+                    <li>11/22 桜舞う木の下で　6話 7~9頁更新</li>
+                    <li>10/26 桜舞う木の下で　6話 4~6頁更新</li>
+                    <li>10/11 桜舞う木の下で　6話 1~3頁更新(六話開始です！)</li>
+                    <li>7/14 桜舞う木の下で　5話 18~20頁更新(五話終了です！)</li>
+                    <li>6/24 桜舞う木の下で　5話 15~17頁更新</li>
+                    <li>6/7 桜舞う木の下で　5話 12~14頁更新</li>
+                    <li>5/4 桜舞う木の下で　5話 6~11頁更新</li>
                     <li>3/21 桜舞う木の下で　5話 1~5頁更新</li>
                 </ul>
                 **** 2019年 ****
@@ -93,7 +86,7 @@
                     <li>2/3　桜舞う木の下で 4話　24~25頁更新</li>
                     <li>1/24　桜舞う木の下で 4話　21~23頁更新</li>
                     <li>1/16 「ここについて」ページのアイコンを変更</li>
-                    <li>1/8 各漫画ページにツイートボタンを設置<br/>
+                    <li>1/8 各漫画ページにツイートボタンを設置<br />
                         桜舞う木の下で 4話 17~20頁更新</li>
                     <li>1/3 HPの置き場所をGit hubに変更</li>
                 </ul>
@@ -106,12 +99,12 @@
                     <li>10/30 桜舞う木の下で 4話　10~11頁更新</li>
                     <li>10/24 漫画の各作品ページをちょっと動くように修正しました</li>
                     <li>10/21 桜舞う木の下で 4話　7~9頁更新</li>
-                    <li>8/5  桜舞木の下で 4話　4~6頁更新</li>
-                    <li>7/1  桜舞木の下で 4話 更新開始。</li>
+                    <li>8/5 桜舞木の下で 4話　4~6頁更新</li>
+                    <li>7/1 桜舞木の下で 4話 更新開始。</li>
                     <li>5/19 スマートフォンで漫画を見る際に、ページ順序が逆になってしまうのを修正</li>
                     <li>5/13 上部メニューの「まんが」欄にカーソルを合わせた時、サブメニューが表示されるように変更</li>
-                    <li>4/24  桜舞う木の下で 3話 最後の頁を更新</li>
-                    <li>4/15  桜舞う木の下で 3話 追加6頁更新</li>
+                    <li>4/24 桜舞う木の下で 3話 最後の頁を更新</li>
+                    <li>4/15 桜舞う木の下で 3話 追加6頁更新</li>
                     <li>4/15 漫画ビューアの調節</li>
                     <li>3/20 ページ作成</li>
                 </ul>
@@ -119,28 +112,23 @@
 
             <!--テキストエリア終わり-->
             <h2>ツイート</h2>
-            <a class="twitter-timeline" href="https://twitter.com/greentea_0123" data-widget-id="685787137124372481">@greentea_0123さんのツイート</a>
-            <script>
-                ! function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0],
-                        p = /^http:/.test(d.location) ? 'http' : 'https';
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = p + "://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");
-            </script>
+            <a class="twitter-timeline" href="https://twitter.com/greentea_0123"
+                data-widget-id="685787137124372481">@greentea_0123さんのツイート</a>
+            <a href="https://twitter.com/intent/tweet?button_hashtag=greentea_0123&ref_src=twsrc%5Etfw"
+                class="twitter-hashtag-button" data-show-count="false">Tweet #greentea_0123</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
     <footer>
         <small>
-                狐茶屋
-                @greentea_0123<br>
-                このサイト上の無断転載を禁じます
-            </small>
+            狐茶屋
+            @greentea_0123<br>
+            このサイト上の無断転載を禁じます
+        </small>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
