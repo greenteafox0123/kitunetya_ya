@@ -24,6 +24,7 @@ header {
     display: flex;
     align-items: center;
     font-size: 11pt;
+    z-index: 1;
 }
 
 @media (max-width: 720px) {
@@ -86,27 +87,26 @@ header {
 
 .global-nav-sub {
     width: 130px;
-    top: 20px;
-    left: -20px;
+    height: 0;
     position: absolute;
     padding: 0;
     background-color: #FFFFFF;
-    display: none;
-    transition-property: display;
-    transition-duration: 500ms;
+    overflow: hidden;
 }
 
 .global-nav-sub li a {
     font-size: 12px;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 130px;
     display: block;
 }
-
 .isOpen{
+    height: 130px;
+    top: 20px;
+    left: -20px;
+    transition: 0.2s;
     display: block;
-    transition-property: display;
-    transition-duration: 500ms;
 }
 
 

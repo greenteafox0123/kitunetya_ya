@@ -18,9 +18,9 @@
                     <a :href="item.url" v-if="!item.submenu">
                         {{ item.name }}
                     </a>
-                    <a :href="item.url" v-else v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+                    <a :href="item.url" v-else v-on:mouseover="mouseover">
                         {{ item.name }}
-                        <ul class="global-nav-sub" :class="{ isOpen }">
+                        <ul class="global-nav-sub" :class="{ isOpen }" v-on:mouseleave="mouseleave">
                             <li v-for="item in item.submenu">
                                 <a :href="item.url">
                                     {{ item.name }}
