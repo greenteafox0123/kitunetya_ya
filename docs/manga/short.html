@@ -17,33 +17,6 @@
             }, function() {
                 $("ul.global-nav-sub", this).slideUp("fast");
             });
-
-
-            //短編が増えるとその分行が嵩むので増えたらなんか考える
-            //簡略化できなかったよ……
-            $(".contents li:nth-child(1)").hover(
-                function() {
-                    $("#aoki").show();
-                    $("#aoki").removeClass("magictime perspectiveLeft")
-                    $("#aoki").addClass("magictime perspectiveLeftReturn");
-                },
-                function() {
-                    $("#aoki").removeClass("magictime perspectiveLeftReturn");
-                    $("#aoki").addClass("magictime perspectiveLeft");
-                    $("#aoki").hide();
-                }
-            );
-            $(".contents li:nth-child(2)").hover(
-                function() {
-                    $("#asa").show();
-                    $("#asa").removeClass("magictime perspectiveLeft")
-                    $("#asa").addClass("magictime perspectiveLeftReturn");
-                },
-                function() {
-                    $("#asa").removeClass("magictime perspectiveLeftReturn");
-                    $("#asa").addClass("magictime perspectiveLeft");
-                    $("#asa").hide();
-                });
         });
     </script>
 </head>

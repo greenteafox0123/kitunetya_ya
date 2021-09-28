@@ -15,17 +15,6 @@
         }, function() {
             $("ul.global-nav-sub", this).slideUp("fast");
         });
-        $(".contents").hover(
-            function() {
-                $(".album").show();
-                $(".album").removeClass("magictime perspectiveLeft")
-                $(".album").addClass("magictime perspectiveLeftReturn");
-            },
-            function() {
-                $(".album").removeClass("magictime perspectiveLeftReturn");
-                $(".album").addClass("magictime perspectiveLeft");
-            }
-        );
         });
       
 
