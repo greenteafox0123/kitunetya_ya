@@ -1,0 +1,64 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@greentea_0123" />
+    <meta name="twitter:title" content="桜舞う木の下で 9話" />
+    <meta name="twitter:description" content="桜舞う木の下で 9話 「なりたいもの」" />
+    <meta name="twitter:image" content="https://greenteafox0123.github.io/kitunetya_ya/img/sakura_new.png" />
+    <link href="../../css/import.css" rel="stylesheet">
+    <title>狐茶屋</title>
+
+    <!-- 漫画ビューアー  -->
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="../../js/jquery.mangaviewer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            var ua = navigator.userAgent;
+            if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+                // スマートフォン用コード
+                $('#viewer').mangaviewer({
+                    page: 3,
+                    path: '9', //ディレクトリパス
+                    ext: 'jpg', //拡張子
+                    page_ejection: 'right' //ページ送り
+
+                });
+            } else {
+                // PC用コード
+                $('#viewer').mangaviewer({
+                    page: 3, //ページ数
+                    path: '9', //ディレクトリパス
+                    ext: 'jpg', //拡張子
+                    page_ejection: 'right' //ページ送り
+                });
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div id="viewer"></div>
+    <div class="share">
+        この話をつぶやく：
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="greentea_0123"
+        data-show-count="false">つぶやく</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <div class="footer-logo">
+        <a href="../../index.html">
+            <img src="../../img/%E3%83%AD%E3%82%B4_2.png" alt="狐茶屋">
+        </a>
+    </div>
+
+    <footer>
+        <small>
+            狐茶屋
+            @greentea_0123<br>
+            このサイト上の無断転載を禁じます<br>
+            スクリプト:<a class="link-script" target="_blank" href="http://conpallo.com/app/free_contents/mangaviewer.html">http://conpallo.com/app/free_contents/mangaviewer.html</a>
+        </small>
+    </footer>
+</body></html>
