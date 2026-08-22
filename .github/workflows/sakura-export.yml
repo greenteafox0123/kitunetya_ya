@@ -1,0 +1,87 @@
+name: Export Sakura for ChatGPT
+
+on:
+  push:
+    branches:
+      - chatgpt-analysis
+    paths:
+      - ".github/workflows/sakura-export.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Create analysis images
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          source = Path("docs/manga/sakura")
+          output = Path("sakura-analysis")
+
+          pages = sorted(
+              source.glob("*/*.jpg"),
+              key=lambda p: (
+                  p.parent.name,
+                  int(p.stem) if p.stem.isdigit() else p.stem
+              )
+          )
+
+          print(f"Found {len(pages)} pages")
+
+          for src in pages:
+              relative = src.relative_to(source)
+              dst = output / relative
+              dst.parent.mkdir(parents=True, exist_ok=True)
+
+              with Image.open(src) as image:
+                  if image.mode != "RGB":
+                      image = image.convert("RGB")
+
+                  max_width = 1400
+
+                  if image.width > max_width:
+                      new_height = round(
+                          image.height * max_width / image.width
+                      )
+                      image = image.resize(
+                          (max_width, new_height),
+                          Image.Resampling.LANCZOS
+                      )
+
+                  image.save(
+                      dst,
+                      "JPEG",
+                      quality=65,
+                      optimize=True
+                  )
+
+              print(relative)
+
+          print("Finished")
+          PY
+
+      - name: Upload analysis artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sakura-analysis
+          path: sakura-analysis/
+          if-no-files-found: error
+          retention-days: 1
