@@ -52,15 +52,11 @@
 				if (!ejections["sheet_num"]) {
 					ejections["sheet_num"] =1;
 				}
-				// 実ページ数を取得
-				var current_num =ejections["sheet_num"] * 2;
-				
-				// 現在ページから表示するページを判定
-				ejections["above_num"] =current_num;
-				ejections["below_num"] =current_num - 1;
-				
-				// 最大ページ数を設定
-				var max_view =Math.ceil(o.options.page / 2);
+				// PCでは見開き、狭い画面では同じ2ページを縦に並べる
+				var current_num = ejections["sheet_num"] * 2;
+				ejections["above_num"] = current_num;
+				ejections["below_num"] = current_num - 1;
+				var max_view = Math.ceil(o.options.page / 2);
 				
 				// 次のページと前のページを取得
 				ejections["next_page"] =ejections["sheet_num"] + 1;
@@ -92,7 +88,9 @@
 				if (o.options.page >= ejections["above_num"]) {
 					$('#'+ejections["sheet_num"]).append('<img id="page'+ ejections["above_num"] +'" class="left_page" rel="' + ejections["next_page"] +'" src="' + o.options.path + '/' + ejections["above_num"] + '.' + o.options.ext + '"width="' + size_view.width + '"height="'+size_view.height+'">');
 				}
-				$('#'+ejections["sheet_num"]).append('<img id="page'+ ejections["below_num"] +'" class="right_page" rel="' + ejections["prev_page"] +'" src="' + o.options.path + '/' + ejections["below_num"] + '.' + o.options.ext + '"width="' + size_view.width + '"height="'+size_view.height+'">');
+				if (ejections["below_num"]) {
+					$('#'+ejections["sheet_num"]).append('<img id="page'+ ejections["below_num"] +'" class="right_page" rel="' + ejections["prev_page"] +'" src="' + o.options.path + '/' + ejections["below_num"] + '.' + o.options.ext + '"width="' + size_view.width + '"height="'+size_view.height+'">');
+				}
 				
 				// 次へと前へのページ設定
 				if ($('div.btn-group').children().size()){
@@ -121,7 +119,9 @@
 				if (o.options.page >= ejections["above_num"]) {
 					$('#'+ejections["sheet_num"]).prepend('<img id="page'+ ejections["above_num"] +'" class="right_page" rel="' + ejections["next_page"] +'" src="' + o.options.path + '/' + ejections["above_num"] + '.' + o.options.ext + '"width="' + size_view.width + '"height="'+size_view.height+'">');
 				}
-				$('#'+ejections["sheet_num"]).prepend('<img id="page'+ ejections["below_num"] +'" class="left_page" rel="' + ejections["prev_page"] +'" src="' + o.options.path + '/' + ejections["below_num"] + '.' + o.options.ext + '"width="' + size_view.width + '"height="'+size_view.height+'">');
+				if (ejections["below_num"]) {
+					$('#'+ejections["sheet_num"]).prepend('<img id="page'+ ejections["below_num"] +'" class="left_page" rel="' + ejections["prev_page"] +'" src="' + o.options.path + '/' + ejections["below_num"] + '.' + o.options.ext + '"width="' + size_view.width + '"height="'+size_view.height+'">');
+				}
 				
 				// 次へと前へのページ設定
 				if ($('div.btn-group').children().size()){
@@ -149,7 +149,7 @@
 				} else {
 				
 					// 最大ページ数を設定
-					var max_view =Math.ceil(o.options.page / 2);
+					var max_view = Math.ceil(o.options.page / 2);
 			
 					// ページャーを生成。現在ページはアクティブに
 					for(i=1;i<=max_view;i++){

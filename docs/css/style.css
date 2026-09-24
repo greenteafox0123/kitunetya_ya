@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Kosugi+Maru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap");
 
 /*ヘッダー*/
 
@@ -26,7 +26,7 @@ header {
     font-size: 11pt;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .logo img {
         height: 64px;
     }
@@ -369,4 +369,703 @@ textarea{
 
 .link-script {
     word-break: break-all;
+}
+
+/* ========================================================================== 
+   狐茶屋 2026 和モダン・エディトリアルテーマ
+   既存HTMLと漫画ビューアを保ったまま、全ページへ共通適用する上書きです。
+   ========================================================================== */
+
+:root {
+    color-scheme: light;
+    --washi: #edf1e8;
+    --paper: rgba(255, 254, 248, 0.94);
+    --paper-solid: #fffef8;
+    --ink: #26352c;
+    --muted: #68776d;
+    --green: #285b3b;
+    --green-dark: #173c29;
+    --green-soft: #e4ede5;
+    --vermilion: #a84436;
+    --gold: #a68b4a;
+    --line: rgba(40, 91, 59, 0.18);
+    --shadow: 0 20px 50px rgba(27, 59, 40, 0.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+#top,
+#index {
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--washi);
+    background-image:
+        linear-gradient(90deg, rgba(40, 91, 59, 0.08), transparent 22%, transparent 78%, rgba(40, 91, 59, 0.08)),
+        repeating-linear-gradient(12deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 9px),
+        repeating-linear-gradient(102deg, rgba(40, 91, 59, 0.025) 0 1px, transparent 1px 12px);
+    font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-style: normal;
+    line-height: 1.8;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    color: var(--green-dark);
+    text-underline-offset: 0.2em;
+}
+
+a:hover {
+    color: var(--green);
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    height: auto;
+    min-height: 92px;
+    padding: 7px max(20px, calc((100% - 980px) / 2));
+    background: rgba(255, 254, 248, 0.96);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 5px 24px rgba(27, 59, 40, 0.06);
+    backdrop-filter: blur(9px);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green-dark), var(--green), #7d9d82, transparent 84%);
+}
+
+.logo {
+    float: none;
+    flex: 0 0 auto;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    height: 76px;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+.global-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 0.94rem;
+}
+
+.global-nav > li {
+    position: relative;
+    display: block;
+    float: none;
+    margin: 0;
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    font-size: inherit;
+    list-style: none;
+}
+
+.global-nav li a {
+    display: block;
+    padding: 12px 2px 9px;
+    color: var(--ink);
+    border-bottom: 2px solid transparent;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.global-nav li a:hover,
+.global-nav li a:focus-visible {
+    color: var(--green);
+    border-bottom-color: var(--green);
+    text-decoration: none;
+}
+
+.global-nav-sub {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: -18px;
+    z-index: 60;
+    width: 176px;
+    margin: 0;
+    padding: 9px 16px 13px;
+    background: var(--paper-solid);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: 0 14px 34px rgba(27, 59, 40, 0.15);
+}
+
+.global-nav-sub li,
+.global-nav-sub li a {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.global-nav-sub li a {
+    padding: 8px 0 5px;
+    font-size: 0.78rem;
+}
+
+.global-nav li:focus-within > .global-nav-sub {
+    display: block !important;
+}
+
+.wrap {
+    min-height: calc(100vh - 176px);
+    padding: 52px 18px 64px;
+    background: transparent;
+    font-family: inherit;
+}
+
+.contents {
+    width: min(100%, 820px);
+    max-width: none;
+    margin: 0 auto;
+    padding: 42px clamp(22px, 5.5vw, 58px) 48px;
+    background: var(--paper);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--green-dark);
+    font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: clamp(1.55rem, 4vw, 2.05rem);
+}
+
+h2,
+h3 {
+    margin: 42px 0 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--line);
+    font-size: clamp(1.18rem, 3vw, 1.42rem);
+}
+
+.contents > h1:first-child,
+.contents > h2:first-child,
+.contents > h3:first-child,
+.contents > section:first-child > h2:first-child,
+.profile > h1:first-child {
+    margin-top: 0;
+}
+
+.welcome {
+    margin: 0 0 38px;
+    color: var(--green-dark);
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    font-size: clamp(1.15rem, 3vw, 1.55rem);
+    letter-spacing: 0.16em;
+    text-align: center;
+}
+
+.en-title {
+    margin-left: 10px;
+    color: #78907e;
+    font-family: Georgia, serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+/* トップページ */
+
+a.bigcard {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 18px;
+    padding: 16px;
+    overflow: visible;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.74);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+a.bigcard:hover {
+    color: inherit;
+    background: #fff;
+    border-color: rgba(40, 91, 59, 0.34);
+    transform: translateY(-2px);
+}
+
+.manga-icon {
+    flex: 0 0 124px;
+    width: 124px;
+    height: 124px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+a.bigcard .text {
+    flex: 1;
+    padding: 0;
+}
+
+a.bigcard .text p {
+    margin: 0;
+}
+
+.eyebrow {
+    color: #718277;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+}
+
+.card-title {
+    margin: 3px 0 7px !important;
+    color: var(--green-dark);
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.detail {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.arrow {
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: 1.65rem;
+}
+
+.new-seal {
+    position: absolute;
+    top: -9px;
+    right: 14px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    color: #fff8ed;
+    background: var(--vermilion);
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(89, 37, 31, 0.2);
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.86rem;
+    transform: rotate(5deg);
+}
+
+.changelog {
+    width: 100%;
+    height: 350px;
+    padding: 20px 24px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.64);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    scrollbar-color: #7b9b81 #edf1e8;
+}
+
+.changelog ul {
+    margin: 8px 0 24px;
+    padding: 0;
+    list-style: none;
+}
+
+.changelog li {
+    position: relative;
+    padding: 7px 0 7px 19px;
+    border-bottom: 1px dotted rgba(40, 91, 59, 0.16);
+}
+
+.changelog li::before {
+    content: "";
+    position: absolute;
+    top: 1.2em;
+    left: 1px;
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+}
+
+.twitter-timeline {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 9px 18px;
+    color: #fff;
+    background: var(--green);
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.twitter-timeline:hover {
+    color: #fff;
+    background: var(--green-dark);
+    text-decoration: none;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 9px 18px;
+    color: #fff;
+    background: var(--green);
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #fff;
+    background: var(--green-dark);
+    text-decoration: none;
+}
+
+/* 漫画一覧・作品別話数 */
+
+#manga .manga-list {
+    display: grid;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+#manga .manga-list li {
+    margin: 0;
+    padding: 17px 20px 0;
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid var(--line);
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+}
+
+#manga .manga-list li a {
+    color: var(--green-dark);
+    text-decoration: none;
+}
+
+#manga .manga-list section {
+    margin: -18px 0 0;
+    padding: 8px 20px 18px;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid var(--line);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+#story .contents > ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+#story li {
+    margin: 0;
+    list-style: none;
+}
+
+#story li a {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 13px 16px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--green);
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#story li a:hover {
+    background: #fff;
+    transform: translateX(3px);
+}
+
+/* プロフィール・リンク */
+
+.profile {
+    max-width: 700px;
+}
+
+.contents #icon img {
+    display: block;
+    width: min(240px, 100%);
+    margin: 8px 0 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 28px rgba(27, 59, 40, 0.13);
+}
+
+.biography {
+    margin: 0;
+    padding: 20px 22px;
+    background: rgba(255, 255, 255, 0.62);
+    border-left: 4px solid var(--green);
+}
+
+#link .contents > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#link .contents > ul > li a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 9px 18px;
+    color: #fff;
+    background: var(--green);
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+#link .contents > ul > section {
+    display: block;
+    margin-top: 18px;
+    padding: 20px 22px;
+    background: rgba(255, 255, 255, 0.64);
+    border-left: 4px solid var(--green);
+}
+
+/* 漫画ビューア */
+
+#viewer {
+    padding: 28px 14px 0;
+}
+
+#viewer .sheet {
+    display: flex;
+    /* PCは右ページから読み、左ページをクリックすると次へ進む */
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1080px;
+    overflow: hidden;
+    background: #dfe7df;
+    border-radius: 4px;
+    box-shadow: 0 18px 46px rgba(18, 42, 28, 0.2);
+}
+
+#viewer .sheet img {
+    display: block;
+    max-width: 50%;
+    height: auto !important;
+}
+
+.btn-toolbar {
+    max-width: 900px;
+    margin: 26px auto 32px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-group button {
+    min-width: 104px;
+    height: 42px;
+    margin: 0;
+    color: #fff;
+    background: var(--green);
+    border: 0;
+    border-radius: 999px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn-group button:hover {
+    background: var(--green-dark);
+}
+
+#page-list {
+    gap: 5px;
+    margin-top: 16px;
+}
+
+#page-list button {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    color: var(--green-dark);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    font-family: inherit;
+}
+
+#page-list button:hover,
+#page-list button.active {
+    color: #fff;
+    background: var(--green);
+}
+
+.share {
+    gap: 8px;
+    margin: 30px auto 20px;
+    color: var(--muted);
+}
+
+.footer-logo a {
+    width: 170px;
+}
+
+.footer-logo img {
+    width: 170px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 26px 16px;
+    color: #edf4ef;
+    background: var(--green-dark);
+    border-top: 3px solid var(--gold);
+    text-align: center;
+}
+
+footer small {
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: #edf4ef;
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+        min-height: 0;
+        padding: 7px 16px 10px;
+    }
+
+    .logo img {
+        height: 62px;
+    }
+
+    header nav {
+        width: 100%;
+        margin-left: 0;
+        overflow-x: auto;
+    }
+
+    .global-nav {
+        gap: 18px;
+    }
+
+    .global-nav-sub {
+        display: none !important;
+    }
+
+    .wrap {
+        padding: 24px 10px 36px;
+    }
+
+    .contents {
+        padding: 26px 18px 32px;
+    }
+
+    a.bigcard {
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .manga-icon {
+        flex-basis: 92px;
+        width: 92px;
+        height: 92px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .detail {
+        display: none;
+    }
+
+    .changelog {
+        padding: 16px;
+    }
+
+    #story .contents > ul {
+        grid-template-columns: 1fr;
+    }
+
+    #manga .manga-list section {
+        line-height: 1.7;
+    }
+
+    #viewer {
+        padding: 14px 6px 0;
+    }
+
+    #viewer .sheet {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #viewer .sheet img {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
 }

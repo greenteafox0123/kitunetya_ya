@@ -14,9 +14,6 @@
             });
         });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <title>狐茶屋</title>
 </head>
 
@@ -40,30 +37,39 @@
         </nav>
     </header>
 
-    <div class="wrap">
+    <main class="wrap">
         <div class="contents">
             <section>
-            <h2>最新のリンク</h2>
+            <h2>最新情報 <span class="en-title">Latest</span></h2>
             <a href="./manga/sakura/9.html" class="bigcard">
                 <img class="manga-icon" src="img/sakura_new.png" alt="桜最新話">
                 <div class="text">
-                    <p>「桜舞う木の下で」最新話</p>
+                    <p class="eyebrow">最新話公開</p>
+                    <p class="card-title">「桜舞う木の下で」第九話</p>
+                    <p class="detail">28~31頁を追加しました</p>
                 </div>
+                <span class="arrow" aria-hidden="true"></span>
+                <span class="new-seal">新</span>
             </a>
             
-            <a href="https://greentea-0123.booth.pm/items/1141549" class="bigcard"- target="_blank">
+            <a href="https://greentea-0123.booth.pm/items/1141549" class="bigcard" target="_blank" rel="noopener noreferrer">
                 <img class="manga-icon" src="img/passcase.png" alt="パスケース">
                 <div class="text">
-                    <p>パスケース販売中</p>
+                    <p class="eyebrow">狐茶屋のお品</p>
+                    <p class="card-title">パスケース販売中</p>
+                    <p class="detail">BOOTHの商品ページへ</p>
                 </div>
+                <span class="arrow" aria-hidden="true">›</span>
             </a>
             </section>
             <!--テキストエリア(もし他に使うところがあったらdivを作る)-->
 
-            <h2>更新履歴</h2>
+            <h2>更新履歴 <span class="en-title">News</span></h2>
             <div class="changelog">
                 *** 2026年 ****
                 <ul>
+                    <li>9/24 サイトのデザイン変更</li>
+                    <li>9/24 桜舞う樹の下で　9話 28~31頁追加</li>
                     <li>8/7 桜舞う樹の下で　9話 25~27頁追加</li>
                     <li>7/17 桜舞う樹の下で　9話 22~24頁追加</li>
                     <li>6/22 桜舞う樹の下で　9話 19~21頁追加</li>
@@ -163,22 +169,10 @@
             </div>
 
             <!--テキストエリア終わり-->
-            <h2>ツイート</h2>
-            <a class="twitter-timeline" href="https://twitter.com/greentea_0123" data-widget-id="685787137124372481">@greentea_0123さんのツイート</a>
-            <script>
-                ! function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0],
-                        p = /^http:/.test(d.location) ? 'http' : 'https';
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = p + "://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");
-            </script>
+            <h2>お知らせ <span class="en-title">Social</span></h2>
+            <a class="social-link" href="https://twitter.com/greentea_0123" target="_blank" rel="noopener noreferrer">@greentea_0123 の投稿を見る</a>
         </div>
-    </div>
+    </main>
     <footer>
         <small>
                 狐茶屋
